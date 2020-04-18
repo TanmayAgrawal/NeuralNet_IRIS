@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # Reading Data from CSV File
-data = pd.read_csv('Iris.csv')
+data = pd.read_csv('iris.csv')
 print(data.head(5))
 data.describe()
 data_normalized = data[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']].apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))
